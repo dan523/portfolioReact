@@ -22,6 +22,14 @@ export interface TickerListProps {
  * @interface Ticker
  */
 export interface Ticker {
+
+    /**
+     * Unique identifier 
+     * 
+     * @type {number}
+     */
+    id: number;
+    
     /**
      * The tickers symbol
      * 
@@ -56,16 +64,16 @@ export class TickerList extends React.PureComponent<TickerListProps, {}> {
         return this.props.tickers || [];
     }
     public render() {
-        return <div>
+        return <ul>
             {
                 this.getTickers().map(ticker => {
-                    return <div> 
+                    return <li key={ticker.id} className="ticker"> 
                         <span>{ticker.symbolStr}</span>
                         <span>{ticker.name}</span>
                         <span>{ticker.unitPrice}</span>
-                    </div>;
+                    </li>;
                 })
             }
-        </div>; 
+        </ul>; 
     }
 }

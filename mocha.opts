@@ -1,0 +1,4 @@
+--require ts-node/register 
+--require ./test_helper.ts
+--watch-extensions tsx,ts 
+src/**/*.spec.tsx
