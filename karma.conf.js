@@ -23,13 +23,15 @@ module.exports = function (config) {
         },
         devtool: "inline-source-map"
     },
-    reporters: ["progress"],
+    // Webpack please don't spam the console when running in karma!
+    webpackServer: { noInfo: true },
+    reporters: ["mocha"],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ["PhantomJS"],
-    singleRun: true,
+    singleRun: false,
     concurrency: Infinity
   });
 };
