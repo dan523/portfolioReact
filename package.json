@@ -5,7 +5,7 @@
   "main": "./dist/bundle.js",
   "scripts": {
     "test": "karma start",
-    "test:debug": "karma start --single-run false"
+    "test:debug": "karma start --single-run false --browsers Chrome"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-mocha": "^1.1.1",
+    "karma-phantomjs-launcher": "^1.0.1",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.8.0",
     "mocha": "^3.0.2",
